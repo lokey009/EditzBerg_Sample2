@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+g)1yhk(*9*qql!8qmj6#jwf-&2+1(jt+vhz@%iy8tp4t*-xq)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app' , '.now.sh','*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'FirstWebApp',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
 
 
 # Password validation
@@ -127,3 +130,4 @@ import os
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+
